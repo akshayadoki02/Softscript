@@ -36,4 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Next testimonial');
         });
     }
+
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    if (mobileMenuToggle && nav) {
+        mobileMenuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuToggle.querySelector('i').classList.toggle('fa-bars');
+            mobileMenuToggle.querySelector('i').classList.toggle('fa-times');
+        });
+    }
 });
